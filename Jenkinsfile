@@ -3,6 +3,8 @@ pipeline {
     stages {
         stage('Deploy') {
             steps {
+                sh 'sls create --template aws-python3 --path myService'
+                sh 'cd myService'
                 sh 'serverless deploy'
             }
         }
