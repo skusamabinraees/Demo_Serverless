@@ -4,7 +4,7 @@ pipeline {
         stage('Change Dir') {
             steps {
                 
-                sh 'cd /home/vagrant/'
+                sh 'cd /home/vagrant'
             }
         }
         stage('Deploy') {
