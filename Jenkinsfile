@@ -4,7 +4,7 @@ pipeline {
         stage('Change Dir') {
             steps {
                 
-                sh '/usr/local/bin/'
+                sh 'cd /usr/local/bin/'
             }
         }
         stage('Deploy') {
