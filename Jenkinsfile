@@ -1,6 +1,12 @@
 pipeline {
     agent any
     stages {
+        stage('Change Dir') {
+            steps {
+                
+                sh 'cd /home/vagrant'
+            }
+        }
         stage('Deploy') {
             steps {
                 
