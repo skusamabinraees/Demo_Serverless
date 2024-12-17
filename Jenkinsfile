@@ -4,7 +4,7 @@ pipeline {
         stage('Change Dir') {
             steps {
                 
-                sh 'cd /home/vagrant'
+                sh '/usr/local/bin/'
             }
         }
         stage('Deploy') {
