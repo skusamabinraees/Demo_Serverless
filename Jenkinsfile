@@ -4,13 +4,13 @@ pipeline {
         stage('Change Dir') {
             steps {
                 
-                sh 'cd /home/vagrant/'
+                'sh cd /home/vagrant/'
             }
         }
         stage('Deploy') {
             steps {
                 
-                sh 'serverless deploy --config serverless.yml'
+                'sh serverless deploy --config serverless.yml'
 '
             }
         }
