@@ -11,7 +11,6 @@ pipeline {
             steps {
                 
                 'sh serverless deploy --config serverless.yml'
-'
             }
         }
         stage('Run Tests') {
