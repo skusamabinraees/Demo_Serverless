@@ -10,7 +10,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 
-                sh 'serverless deploy --config serverless.yml
+                sh 'serverless deploy --config serverless.yml'
 '
             }
         }
