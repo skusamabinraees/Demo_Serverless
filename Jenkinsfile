@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Deploy') {
             steps {
-                
+                sh 'cd /home/vagrant/'
                 sh 'serverless deploy --config /home/vagrant/serverless.yml'
             }
         }
