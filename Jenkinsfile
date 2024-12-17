@@ -1,16 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('Change Dir') {
-            steps {
-                
-                sh 'cd /home/vagrant'
-            }
-        }
         stage('Deploy') {
             steps {
                 
-                sh 'serverless deploy --config serverless.yml'
+                sh 'serverless deploy --config /home/vagrant/serverless.yml
+'
             }
         }
         stage('Run Tests') {
