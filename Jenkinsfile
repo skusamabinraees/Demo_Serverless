@@ -1,25 +1,29 @@
 pipeline {
-    agent any
     stages {
-        stage('Deploy') {
+        stage('Checkout') {
             steps {
-                #sh 'cd /home/vagrant/Demo_Serverless/'
-                #sh 'ls'
-                sh 'serverless deploy --config serverless.yml'
+                git 'https://github.com/skusamabinraees/Demo_Serverless.git'
             }
         }
-        stage('Run Tests') {
+        stage('Build') {
             steps {
-                sh 'pytest'
+                sh 'sls package' // Package the serverless application
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                sh 'sls deploy' // Deploy the application locally or to a specified environment
             }
         }
     }
+
     post {
         success {
-            echo 'Deployment and tests successful!'
+            echo 'Deployment was successful!'
         }
         failure {
-            echo 'Deployment or tests failed!'
+            echo 'Deployment failed.'
         }
     }
 }
