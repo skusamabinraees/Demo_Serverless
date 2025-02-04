@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Deploy') {
             steps {
+                withAWS(credentials: 'AKIAYDWHS7D3CUT2ZNXR/******', region: 'us-east-1')
                 sh 'sls deploy' // Deploy the application
             }
         }
