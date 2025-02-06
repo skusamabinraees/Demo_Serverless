@@ -5,7 +5,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 withAWS(credentials: 'AKIAYDWHS7D3CUT2ZNXR/******', region: 'us-east-1')
-                sh 'cd CICD/CICD-New/'
+                sh 'cd CICD/CICD-New/CICD'
                 sh 'sls deploy' // Deploy the application
             }
         }
