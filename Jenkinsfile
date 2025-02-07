@@ -1,12 +1,14 @@
 pipeline {
-    agent any // This specifies that the pipeline can run on any available agent
+     agent any
+    environment {
+    PATH = "${env./var/lib/jenkins/workspace/CICD_Test}/build-dir:${env./home/usama.s/Serverless/CICD}"
+}
 
     stages {
         stage('Deploy') {
             steps {
                 sh 'ls'
                 sh 'pwd'
-                sh 'cd /home/usama.s/Serverless/CICD'
                 sh 'sls deploy' // Deploy the application
             }
         }
