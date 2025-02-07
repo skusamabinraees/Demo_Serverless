@@ -1,12 +1,8 @@
 pipeline {
      agent any
-    environment {
-    PATH = "${env./var/lib/jenkins/workspace/CICD_Test}/build-dir:${env./home/usama.s/Serverless/CICD}"
-}
-     
-withEnv(["PATH+BUILD_DIR=${/var/lib/jenkins/workspace/CICD_Test}/build-dir"]) {
-    sh 'echo "PATH is: $/home/usama.s/Serverless/CICD"'
-}
+         environment {
+              PATH = "${env./var/lib/jenkins/workspace/CICD_Test}/build-dir:${env./home/usama.s/Serverless/CICD}"
+          }
 
     stages {
         stage('Deploy') {
