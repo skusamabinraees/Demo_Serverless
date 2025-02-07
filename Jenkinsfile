@@ -5,6 +5,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh 'ls'
+                echo $PATH
                 sh 'sls deploy' // Deploy the application
             }
         }
