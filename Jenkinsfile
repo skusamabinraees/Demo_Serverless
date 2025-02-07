@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh 'ls'
                 sh 'pwd'
-                export PATH=$PATH:/usr/local/share/dotnet:/usr/local/bin
+                sh 'export PATH=$PATH:/usr/local/share/dotnet:/usr/local/bin'
                 sh 'sls deploy' // Deploy the application
             }
         }
