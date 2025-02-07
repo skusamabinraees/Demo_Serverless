@@ -5,6 +5,7 @@ pipeline {
             steps {
                 sh 'ls'
                 sh 'pwd'
+                sh export PATH=$PATH:/home/usama.s/.nvm/versions/node/v23.7.0/bin/sls:/usr/local/bin
                 sh 'sls deploy' // Deploy the application
             }
         }
