@@ -5,7 +5,6 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh 'ls'
-                sh 'cd CICD/CICD-New/CICD'
                 sh 'sls deploy' // Deploy the application
             }
         }
