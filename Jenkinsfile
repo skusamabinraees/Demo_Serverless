@@ -5,7 +5,6 @@ pipeline {
     }
 
     stages {
-         {
         stage('Example Stage') {
             steps {
                 sh 'echo $PATH'
