@@ -2,16 +2,10 @@ pipeline {
     agent any // This specifies that the pipeline can run on any available agent
 
     stages {
-        stage('Setup Environment') {
-            steps {
-                script {
-                    env.PATH = "${env.PATH}:${HOME}/home/usama.s/.nvm/versions/node/v18.20.4/bin/serverless"
-                }
-            }
-        }
         stage('Deploy') {
             steps {
                 sh 'ls'
+                sh 'pwd'
                 sh 'sls deploy' // Deploy the application
             }
         }
