@@ -1,8 +1,8 @@
 pipeline {
      agent any
          environment {
-              PATH = "${env./var/lib/jenkins/workspace/CICD_Test}/build-dir:${env./home/usama.s/Serverless/CICD}"
-          }
+        PATH = "${env.WORKSPACE}/build-dir:${env.HOME}/Serverless/CICD:${env.PATH}"
+    }
 
     stages {
         stage('Deploy') {
