@@ -5,12 +5,6 @@ pipeline {
     }
 
     stages {
-        stage('Example Stage') {
-            steps {
-                sh 'echo $PATH'
-                sh 'sls --version' // Example: try running your serverless command
-            }
-        }
         stage('Deploy') {
             steps {
                 sh 'ls'
