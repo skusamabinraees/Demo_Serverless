@@ -6,6 +6,7 @@ pipeline {
             steps {
                 sh 'ls'
                 sh 'pwd'
+                sh 'cd /home/usama.s/Serverless/CICD/'
                 sh 'sls deploy' // Deploy the application
             }
         }
