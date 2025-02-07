@@ -5,7 +5,7 @@ pipeline {
         stage('Setup Environment') {
             steps {
                 script {
-                    env.PATH = "${env.PATH}:$/home/usama.s/.nvm/versions/node/v18.20.4/bin/serverless"
+                    env.PATH = "${env.PATH}:${HOME}/home/usama.s/.nvm/versions/node/v18.20.4/bin/serverless"
                 }
             }
         }
