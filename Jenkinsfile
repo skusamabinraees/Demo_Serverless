@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Install Serverless') {
             steps {
-                sh 'npm install -g serverless@3'
+                sh 'sudo npm install -g serverless@3'
             }
         }
 
