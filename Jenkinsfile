@@ -4,12 +4,7 @@ pipeline {
         stage('Install Serverless') {
             steps {
                 sh 'npm install serverless@3'
-            }
-        }
-
-        stage('Deploy Serverless Application') {
-            steps {
-                sh 'serverless deploy'
+                sh 'npx serverless deploy' 
             }
         }
     }
