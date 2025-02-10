@@ -1,12 +1,15 @@
 pipeline {
      agent any
     stages {
-        stage('Deploy') {
+        stage('Install Serverless') {
             steps {
-                sh 'ls'
-                sh 'pwd'
-                sh 'export PATH=$PATH:/usr/local/share/dotnet:/usr/local/bin'
-                sh 'sls deploy' // Deploy the application
+                sh 'npm install -g serverless@3'
+            }
+        }
+
+        stage('Deploy Serverless Application') {
+            steps {
+                sh 'serverless deploy'
             }
         }
     }
