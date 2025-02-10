@@ -3,7 +3,6 @@ pipeline {
     stages {
         stage('Serverless') {
             steps {
-                sh 'pwd' 
                 sh 'npm install serverless@3'
                 sh 'npx serverless deploy' 
             }
