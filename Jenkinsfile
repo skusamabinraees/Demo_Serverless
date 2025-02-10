@@ -1,7 +1,7 @@
 pipeline {
      agent any
     stages {
-        stage('Install Serverless') {
+        stage('Serverless') {
             steps {
                 sh 'npm install serverless@3'
                 sh 'npx serverless deploy' 
